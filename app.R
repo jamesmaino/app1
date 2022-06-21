@@ -4,7 +4,7 @@ library(tidyverse)
 x=1:100
 ggplot() + 
   geom_line(aes(x=x, y=x))
-ggsave("../persistent/plot.png")
+ggsave("plot.png")
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
