@@ -1,6 +1,10 @@
 library(shiny)
 library(tidyverse)
 
+data(mtcars)
+mtcars
+write_csv(mtcars, '../data/mtcars.csv')
+
 x=1:100
 ggplot() +
   geom_line(aes(x=x, y=x))
