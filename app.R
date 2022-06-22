@@ -5,16 +5,20 @@ data(mtcars)
 mtcars
 write_csv(mtcars, '../data/mtcars.csv')
 
+
 x=1:100
 ggplot() +
   geom_line(aes(x=x, y=x))
-ggsave("./plot/plot.png")
+ggsave("./plot/plot.png") 
+
+datetime = read.csv('plot/datetime.csv')[1,2]
+
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
   
   # App title ----
-  titlePanel("Hello Shiny!"),
+  titlePanel(sprintf("Hello Shiny! It's %s", datetime)),
   
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
